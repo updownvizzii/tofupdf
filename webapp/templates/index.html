@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Fusion Wizard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<section class="hero-section">
+  <div class="container">
+    <h1 class="hero-title">PDF Fusion Wizard</h1>
+    <p class="hero-tagline">Combine multiple PDF files into one seamless document. Upload, reorder, and merge with ease.</p>
+    <form class="upload-form" action="/" method="post" enctype="multipart/form-data">
+      <label class="upload-area">
+        <div class="upload-icon">⬆</div>
+        <div class="upload-heading">Upload PDF Files</div>
+        <div class="upload-instructions">Drag and drop your PDF files here, or click to browse</div>
+        <input type="file" name="files" multiple accept="application/pdf">
+        <button type="submit" class="cta-button">Choose Files</button>
+        <p class="note">Supports multiple PDF files • Maximum 10MB per file</p>
+      </label>
+    </form>
+    <p class="note"><a href="/split" class="alt-link">Need to split a PDF?</a></p>
+  </div>
+</section>
+</body>
+</html>
