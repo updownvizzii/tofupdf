@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Splitter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<section class="hero-section">
+  <div class="container">
+    <h1 class="hero-title">PDF Splitter</h1>
+    <p class="hero-tagline">Split a PDF into individual pages and download them as a ZIP file.</p>
+    <form class="upload-form" action="/split" method="post" enctype="multipart/form-data">
+      <label class="upload-area">
+        <div class="upload-icon">⬆</div>
+        <div class="upload-heading">Upload a PDF File</div>
+        <div class="upload-instructions">Drag and drop your PDF here, or click to browse</div>
+        <input type="file" name="file" accept="application/pdf">
+        <button type="submit" class="cta-button">Split PDF</button>
+        <p class="note">Maximum 10MB file</p>
+      </label>
+    </form>
+    <p class="note"><a href="/" class="alt-link">Need to merge PDFs?</a></p>
+  </div>
+</section>
+</body>
+</html>
